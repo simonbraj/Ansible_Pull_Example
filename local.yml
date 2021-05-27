@@ -3,7 +3,7 @@
   tasks:
    - name: create files
      file:
-       path: /tmp/{{items}}
+       path: /tmp/{{item}}
        state: touch
      with_items:
        - file1
