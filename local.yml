@@ -1,9 +1,11 @@
-- host: localhost
-  connection: local
-  become: true
-  
+---
+- hosts: localhost
   tasks:
-  - name: Install htop
-    apt:
-      name: htop
-
+   - name: create files
+     file:
+       path: /tmp/{{items}}
+       state: touch
+     with_items:
+       - file1
+       - file2
+       - file3
