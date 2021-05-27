@@ -1,0 +1,6 @@
+- name: testing the git
+  host: localhost
+  become: true 
+  
+  yum:
+   name: ipconfig
